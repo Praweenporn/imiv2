@@ -7,11 +7,17 @@
     <title>Hello, world!</title>
     <script src="https://code.jquery.com/jquery-2.2.4.js"
     integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"> </script>
   </head>
 
   <body>
-    <h1>Hello world!</h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <div class="row">
+      <div class="col-3">
+        <canvas id="myChart" width="400" height="200"></canvas>
+      </div>
+
+    </div>
     <div class="container">
       <div class="class row">
         <div class="class col-3">
@@ -29,8 +35,6 @@
             <div class="col-8" >
               <span id="lastHumidity"></span>
             </div>
-              
-            
           </div>
 
           <div class="class row">
@@ -38,8 +42,6 @@
             <div class="col-8" >
               <span id="lastUpdate"></span>
             </div>
-              
-            
           </div>
         </div>
       </div>
