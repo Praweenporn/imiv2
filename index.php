@@ -49,7 +49,7 @@
     <script>
              $(()=>{
               //alert("Hello ");
-              let url = "https://api.thingspeak.com/channels/1458414/fields/1.json?results=2"
+              let url = "https://api.thingspeak.com/channels/1458414/feeds.json?results=2"
               $.getJSON(url)
               .done(function(data){
                console.log(data);
