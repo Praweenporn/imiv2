@@ -12,13 +12,44 @@
     </script>
   </head>
   <body>  
-    <h1>Hello, world!</h1>
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <h2> Praweenporn Mathurot</h2>
+    <div class="container"> 
+      <div class="row">
+        <div class="col-3">
+          <div class="row">
+            <div class="col-4"><b>Temperture</b></div>
+            <div class="col-8"> 
+              <span id="lastTemperature"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+                <b>Humidity</b>
+            </div>
+            <div class="col-8"> 
+              <span id="lastHumidity">
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </body>
    <script>
-       $(()=>{
-           alert("Hello");
-       })
+       /*$(()=>{
+           //alert("Hello");
+           let url = "https://api.thingspeak.com/channels/1458414/feeds.json?results=1";
+           $.getJSON(url)
+            .done(funtion(data){
+              let feeds = data.feeds;
+              console.log(feeds[1]);
+              console.log(feeds[1].field1);
+            })
+            .fail(function(error){
+
+            });
+       });*/
    </script>
 </html>
