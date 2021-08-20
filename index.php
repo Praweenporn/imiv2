@@ -18,21 +18,21 @@
       <div class="row">
         <div class="col-3">
           <div class="row">
-            <div class="col-4"><br>Temperature</br></div>
+            <div class="col-4"><b>Temperature</b></div>
             <div class="col-8">
               <span id="lastTemperature"></span>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-4"><br>Humidity</br></div>
+            <div class="col-4"><b>Humidity</b></div>
             <div class="col-8">
               <span id="lastHumidity"></span>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-4"><br>update</br></div>
+            <div class="col-4"><b>update</b></div>
             <div class="col-8">
               <span id="lastUpdate"></span>
             </div>
@@ -43,6 +43,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
 
   </body>
 
