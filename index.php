@@ -20,21 +20,21 @@
           <div class="row">
             <div class="col-4"><br>Temperature</br></div>
             <div class="col-8">
-              <span id= "lastTemperature"></span>
+              <span id="lastTemperature"></span>
             </div>
           </div>
 
           <div class="row">
             <div class="col-4"><br>Humidity</br></div>
             <div class="col-8">
-              <span id= "lastHumidity"></span>
+              <span id="lastHumidity"></span>
             </div>
           </div>
 
           <div class="row">
             <div class="col-4"><br>update</br></div>
             <div class="col-8">
-              <span id= "lastUpdate"></span>
+              <span id="lastUpdate"></span>
             </div>
           </div>          
 
@@ -61,10 +61,9 @@
                $("lastHumidity").text(feed[0].field1+ " %");
                $("lastUpdate").text(feed[0].created_at);
     
-            })
-                    
+            })       
             .fail(function(error){
-
+              console.log(error);
              });
 
             });
