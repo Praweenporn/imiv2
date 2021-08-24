@@ -48,10 +48,9 @@
   <script>
       function loadData(){
         let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=2";
-
           $.getJSON(url)
             .done(function(data){
-              //console.log(data);
+              console.log(data);
               let feed=data.feeds;
               console.log(feed[0]);
               $("#lastTemperature").text(feed[0].field2+  " C");
@@ -108,6 +107,7 @@
 
       $(()=>{
           //alert("Hello");
+          loadData();
           showChart();
 
       });
