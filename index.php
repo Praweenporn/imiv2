@@ -70,13 +70,9 @@
         console.log(plot_data);
       }
 
-      function showChart(plot_data){
+      function showChart(plot_data,label,id){
         var ctx = documnet.getElementByID("myChart").getContext("2d");
         var data;
-        var id1 = "myChart1";
-        var id2 = "myChart2";
-        var label1 = "Humidity";
-        var label2 = "Temperature";
 
         if(label == "Humidity"){
           data = plot_data.data;
@@ -96,14 +92,16 @@
             ]
           }
         });
-        return label;
-        return id;
       }
 
 
       $(()=>{
           //alert("Hello");
           var plot_data = Object();
+          var id1 = "myChart1";
+          var id2 = "myChart2";
+          var label1 = "Humidity";
+          var label2 = "Temperature";
           loadData(plot_data);
           showChart(plot_data,id1,label1);
           showChart(plot_data,id2,label2);
