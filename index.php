@@ -65,8 +65,9 @@
             xlabel.push(k+1);
             data1.push(v.field1);
             data2.push(v.field2);
-          });
         });
+      });
+    });
         plot_data.xlabel = xlabel;
         plot_data.data = data1;
         plot_data.data1 = data2;
