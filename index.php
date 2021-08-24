@@ -50,7 +50,7 @@
         var data2 = [];
 
         let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=50";
-          $.getJSON(url,(function(data){
+          $.getJSON(url,function(data){
               let feeds = data.feeds;
               console.log(feed[0]);
               $("#lastTemperature").text(feeds[0].field2+  " C");
