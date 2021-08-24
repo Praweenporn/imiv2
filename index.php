@@ -50,23 +50,25 @@
         var data2 = [];
 
         let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=50";
-          $.getJSON(url)
+          $.getJSON(url){
             .done(function(data){
-              let feed = data.feeds;
+              let feeds = data.feeds;
               console.log(feed[0]);
-              $("#lastTemperature").text(feed[0].field2+  " C");
-              $("#lastHumidity").text(feed[0].field1+  " %");
-              $("#lastUpdate").text(feed[0].created_at);
-            })
+              $("#lastTemperature").text(feeds[0].field2+  " C");
+              $("#lastHumidity").text(feeds[0].field1+  " %");
+              $("#lastUpdate").text(feeds[0].created_at);
+           
             .fail(function(error){
               console.log(error);
-            });
+          
             
-        $.each(feed, (k, v)=>{
-          xlabel.push(v.entry_id);
+        $.each(feeds, (k, v)=>{
+          xlabel.push(k+1;
           data1.push(v.field1);
           data2.push(v.field2);
         });
+      });
+    })
         plot_data.xlabel = xlabel;
         plot_data.data = data1;
         plot_data.data1 = data2;
