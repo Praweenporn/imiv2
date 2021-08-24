@@ -56,9 +56,9 @@
               //console.log(data);
               let feed=data.feeds;
               console.log(feed[0]);
-              $("#lastTemperature").text(feed[0].field2+  " C");
-              $("#lastHumidity").text(feed[0].field1+  " %");
-              $("#lastUpdate").text(feed[0].created_at);
+              $("#lastTemperature  ").text(feed[0].field2+  " C");
+              $("#lastHumidity  ").text(feed[0].field1+  " %");
+              $("#lastUpdate  ").text(feed[0].created_at);
             })
             .fail(function(error){
               console.log(error);
