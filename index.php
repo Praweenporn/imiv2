@@ -12,6 +12,7 @@
 
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
     <div class="row">
       <div class="col-3">
         <canvas id="myChart" width="400" height="200"></canvas>
@@ -19,24 +20,31 @@
 
     </div>
     <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+      </div>
+
+
       <div class="class row">
         <div class="class col-3">
           <div class="class row">
-            <div class="class col-4"><b>Temperature   </b></div>
+            <div class="class col-4"><b>Temperature</b></div>
             <div class="col-8" >
               <span id="lastTemperature"></span>
             </div>      
           </div>
 
           <div class="class row">
-            <div class="class col-4"><b>Humidity   </b></div>
+            <div class="class col-4"><b>Humidity</b></div>
             <div class="col-8" >
               <span id="lastHumidity"></span>
             </div>
           </div>
 
           <div class="class row">
-            <div class="class col-4"><b>Update   </b></div>
+            <div class="class col-4"><b>Update</b></div>
             <div class="col-8" >
               <span id="lastUpdate"></span>
             </div>
@@ -44,12 +52,42 @@
         </div>
       </div>
     </div>
-
-
   </body>
+
   <script>
+      function loadData(){
+
+      }
+
+      function showChart(){
+        var ctx = documnet.getElementByID("myChart").getContext("2d");
+        var xlabel = [1,2,3,4,5,6,7,8,9,10];
+        var data1 = [2,3,4,5,10];
+        var data2 = [3,8,2,4,1];
+        var mychart = new Chart(ctx, {
+          type:"line",
+          data: {
+            labels: xlabel,
+            datasets:[
+              {
+                label: "1st line",
+                data: data1
+              },
+              {
+                label: "2nd line",
+                data: data2
+              }
+            ]
+          }
+        });
+      }
+
+
       $(()=>{
           //alert("Hello");
+
+          showChart();
+
           let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=2";
           $.getJSON(url)
             .done(function(data){
