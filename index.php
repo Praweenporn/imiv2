@@ -108,7 +108,18 @@
       $(()=>{
           //alert("Hello");
           loadData();
-          showChart();
+          var data = new Object();
+          data.label = "1st line ";
+          data.xlabel = [1,2,3,4,5,6,7,8,9,10];
+          data.data = [3,8,2,4,1];
+          showLine("myChart",data1);
+
+          var data = new Object();
+          data.label = "2st line ";
+          data.xlabel = [11,12,13,14,15,16,17,18,19,20];
+          data.data = [30,80,20,40,10];
+          showLine("myChart2",data2);
+          //showChart();
 
       });
   </script>
