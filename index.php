@@ -52,7 +52,7 @@
         let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=50";
           $.getJSON(url)
             .done(function(data){
-              let feed=data.feeds;
+              let feed = data.feeds;
               console.log(feed[0]);
               $("#lastTemperature").text(feed[0].field2+  " C");
               $("#lastHumidity").text(feed[0].field1+  " %");
@@ -62,7 +62,7 @@
               console.log(error);
             });
             
-        $.each(feeds, (k, v)=>{
+        $.each(feed, (k, v)=>{
           xlabel.push(v.entry_id);
           data1.push(v.field1);
           data2.push(v.field2);
