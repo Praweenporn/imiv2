@@ -13,12 +13,7 @@
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
-    <div class="row">
-      <div class="col-3">
-        <canvas id="myChart" width="400" height="200"></canvas>
-      </div>
-
-    </div>
+  
     <div class="container">
       <div class="row">
         <div class="col-6">
@@ -82,10 +77,24 @@
         });
       }
 
+      function showLine(){
+        var ctx = documnet.getElementByID("myChart").getContext("2d");
+        var mychart = new Chart(ctx, {
+          type:"line",
+          data: {
+            labels: data.xlabel,
+            datasets:[
+              {
+                label: data.label,
+                data: data.data
+              }
+            ]
+          }
+        });
+      }
 
       $(()=>{
           //alert("Hello");
-
           showChart();
 
           let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=2";
