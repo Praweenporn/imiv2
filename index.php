@@ -44,11 +44,15 @@
   </body>
 
   <script>
-      function loadData(){
-        let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=2";
+      function loadData(plot_data){
+        var plot_data = Object();
+        var xlabel = [];
+        var data1 = [];
+        var data2 = [];
+
+        let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=50";
           $.getJSON(url)
             .done(function(data){
-              console.log(data);
               let feed=data.feeds;
               console.log(feed[0]);
               $("#lastTemperature").text(feed[0].field2+  " C");
@@ -58,45 +62,41 @@
             .fail(function(error){
               console.log(error);
             });
+            
+        $.each(feeds, (k, v)=>{
+          xlabel.push(v.entry_id);
+          data1.push(v.field1);
+          data2.push(v.field2);
+        });
+        plot_data.xlabel = xlabel;
+        plot_data.data = data1;
+        plot_data.data1 = data2;
+        console.log(plot_data);
+        
       }
 
-      function showChart(){
+      function showChart(plot_data,label){
         var ctx = documnet.getElementByID("myChart").getContext("2d");
-        var xlabel = [1,2,3,4,5,6,7,8,9,10];
-        var data1 = [2,3,4,5,10];
-        var data2 = [3,8,2,4,1];
+        var data;
+        var id1 = "myChart1";
+        var id2 = "myChart2";
+        var label1 = "Humidity";
+        var label2 = "Temperature";
+
+        if(label == "Humidity"){
+          data = plot_data.data;
+        } elseif (label == "Temperature"){
+          data = plot_data.data1;
+        }
+        var xlabel =  plot_data.xlabel;   
         var mychart = new Chart(ctx, {
           type:"line",
           data: {
             labels: xlabel,
             datasets:[
               {
-                label: "1st line ",
-                data: data1
-              },
-              {
-                label: "2nd line ",
-                data: data2
-              }
-            ]
-          }
-        });
-      }
-
-      function showLine(chartid, data){
-        var ctx = documnet.getElementByID("myChart").getContext("2d");
-        var mychart = new Chart(ctx, {
-          type:"line",
-          data: {
-            labels: data.xlabel,
-            datasets:[
-              {
-                label: "1st line ",
-                data: data1
-              },
-              {
-                label: "2nd line ",
-                data: data2
+                label: label,
+                data: data
               }
             ]
           }
@@ -105,20 +105,9 @@
 
       $(()=>{
           //alert("Hello");
-          loadData();
-          var data = new Object();
-          data.label = "1st line ";
-          data.xlabel = [1,2,3,4,5,6,7,8,9,10];
-          data.data = [3,8,2,4,1];
-          showLine("myChart",data1);
-
-          var data = new Object();
-          data.label = "2st line ";
-          data.xlabel = [11,12,13,14,15,16,17,18,19,20];
-          data.data = [30,80,20,40,10];
-          showLine("myChart2",data2);
-          showChart();
-
+          loadData(plot_data);
+          showChart(plot_data,id1,label1);
+          showChart(plot_data,id2,label2);
       });
   </script>
 </html>
