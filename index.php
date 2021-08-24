@@ -11,16 +11,12 @@
   </head>
 
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
-  
     <div class="container">
       <div class="row">
         <div class="col-6">
           <canvas id="myChart" width="400" height="200"></canvas>
         </div>
       </div>
-
 
       <div class="class row">
         <div class="class col-3">
@@ -77,11 +73,11 @@
             labels: xlabel,
             datasets:[
               {
-                label: "1st line",
+                label: "1st line ",
                 data: data1
               },
               {
-                label: "2nd line",
+                label: "2nd line ",
                 data: data2
               }
             ]
@@ -97,8 +93,12 @@
             labels: data.xlabel,
             datasets:[
               {
-                label: data.label,
-                data: data.data
+                label: "1st line ",
+                data: data1
+              },
+              {
+                label: "2nd line ",
+                data: data2
               }
             ]
           }
