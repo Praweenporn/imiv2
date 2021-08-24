@@ -45,7 +45,6 @@
 
   <script>
       function loadData(plot_data){
-        var plot_data = Object();
         var xlabel = [];
         var data1 = [];
         var data2 = [];
@@ -105,6 +104,7 @@
 
       $(()=>{
           //alert("Hello");
+          var plot_data = Object();
           loadData(plot_data);
           showChart(plot_data,id1,label1);
           showChart(plot_data,id2,label2);
