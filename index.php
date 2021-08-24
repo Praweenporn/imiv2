@@ -36,7 +36,7 @@
           </div>
 
           <div class="class row">
-            <div class="class col-4"><b>Time Update</b></div>
+            <div class="class col-4"><b>Update</b></div>
             <div class="col-8" >
               <span id="lastUpdate"></span>
             </div>
@@ -55,10 +55,10 @@
             .done(function(data){
               //console.log(data);
               let feed=data.feeds;
-              console.log(feed);
-              $("#lastTemperature").text(feed[1].field2+" C");
-              $("#lastHumidity").text(feed[1].field1+" %");
-              $("#lastUpdate").text(feed[1].created_at);
+              console.log(feed[0]);
+              $("#lastTemperature").text(feed[0].field2+" C");
+              $("#lastHumidity").text(feed[0].field1+" %");
+              $("#lastUpdate").text(feed[0].created_at);
             })
             .fail(function(error){
               console.log(error);
