@@ -51,7 +51,19 @@
 
   <script>
       function loadData(){
-
+        let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=2";
+          $.getJSON(url)
+            .done(function(data){
+              console.log(data);
+              let feed=data.feeds;
+              console.log(feed[0]);
+              $("#lastTemperature").text(feed[0].field2+  " C");
+              $("#lastHumidity").text(feed[0].field1+  " %");
+              $("#lastUpdate").text(feed[0].created_at);
+            })
+            .fail(function(error){
+              console.log(error);
+            });
       }
 
       function showChart(){
@@ -77,7 +89,7 @@
         });
       }
 
-      function showLine(){
+      function showLine(chartid, data){
         var ctx = documnet.getElementByID("myChart").getContext("2d");
         var mychart = new Chart(ctx, {
           type:"line",
@@ -97,19 +109,6 @@
           //alert("Hello");
           showChart();
 
-          let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=2";
-          $.getJSON(url)
-            .done(function(data){
-              //console.log(data);
-              let feed=data.feeds;
-              console.log(feed[0]);
-              $("#lastTemperature").text(feed[0].field2+  " C");
-              $("#lastHumidity").text(feed[0].field1+  " %");
-              $("#lastUpdate").text(feed[0].created_at);
-            })
-            .fail(function(error){
-              console.log(error);
-            });
       });
   </script>
 </html>
