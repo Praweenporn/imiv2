@@ -54,11 +54,11 @@
           $.getJSON(url)
             .done(function(data){
               //console.log(data);
-              let feed = data.feeds;
-              console.log(feeds[0]);
-              $("#lastTemperature").text(feeds[0].field2+  " C");
-              $("#lastHumidity").text(feeds[0].field1+  " %");
-              $("#lastUpdate").text(feeds[0].created_at);
+              let feed=data.feeds;
+              console.log(feed[0]);
+              $("#lastTemperature").text(feed[0].field2+  " C");
+              $("#lastHumidity").text(feed[0].field1+  " %");
+              $("#lastUpdate").text(feed[0].created_at);
             })
             .fail(function(error){
               console.log(error);
