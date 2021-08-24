@@ -22,21 +22,21 @@
       <div class="class row">
         <div class="class col-3">
           <div class="class row">
-            <div class="class col-4"><b>Temperature</b></div>
+            <div class="class col-4"><b>Temperature   </b></div>
             <div class="col-8" >
               <span id="lastTemperature"></span>
             </div>      
           </div>
 
           <div class="class row">
-            <div class="class col-4"><b>Humidity</b></div>
+            <div class="class col-4"><b>Humidity   </b></div>
             <div class="col-8" >
               <span id="lastHumidity"></span>
             </div>
           </div>
 
           <div class="class row">
-            <div class="class col-4"><b>Update</b></div>
+            <div class="class col-4"><b>Update   </b></div>
             <div class="col-8" >
               <span id="lastUpdate"></span>
             </div>
@@ -56,9 +56,9 @@
               //console.log(data);
               let feed=data.feeds;
               console.log(feed[0]);
-              $("#lastTemperature  ").text(feed[0].field2+  " C");
-              $("#lastHumidity  ").text(feed[0].field1+  " %");
-              $("#lastUpdate  ").text(feed[0].created_at);
+              $("#lastTemperature").text(feed[0].field2+  " C");
+              $("#lastHumidity").text(feed[0].field1+  " %");
+              $("#lastUpdate").text(feed[0].created_at);
             })
             .fail(function(error){
               console.log(error);
