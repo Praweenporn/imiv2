@@ -71,7 +71,7 @@
       }
 
       function showChart(plot_data,label,id){
-        var ctx = documnet.getElementByID("myChart").getContext("2d");
+        var ctx = document.getElementByID("myChart").getContext("2d");
         var data;
 
         if(label == "Humidity"){
