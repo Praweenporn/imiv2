@@ -52,7 +52,7 @@
         let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=50";
           $.getJSON(url,function(data){
               let feeds = data.feeds;
-              console.log(feed[0]);
+              console.log(feeds[0]);
               $("#lastTemperature").text(feeds[0].field2+  " C");
               $("#lastHumidity").text(feeds[0].field1+  " %");
               $("#lastUpdate").text(feeds[0].created_at);
@@ -70,7 +70,7 @@
         console.log(plot_data);
       }
 
-      function showChart(plot_data,label){
+      function showChart(plot_data,label,id){
         var ctx = documnet.getElementByID("myChart").getContext("2d");
         var data;
         var id1 = "myChart1";
