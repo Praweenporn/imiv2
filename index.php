@@ -85,7 +85,7 @@
 
         if(label == "Humidity"){
           data = plot_data.data;
-        } elseif (label == "Temperature"){
+        } else if (label == "Temperature"){
           data = plot_data.data1;
         }
         var xlabel =  plot_data.xlabel;   
