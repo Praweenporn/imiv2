@@ -70,7 +70,7 @@
         console.log(plot_data);
       }
 
-      function showChart(plot_data,label,id){
+      function showChart(plot_data){
         var ctx = documnet.getElementByID("myChart").getContext("2d");
         var data;
         var id1 = "myChart1";
@@ -96,7 +96,10 @@
             ]
           }
         });
+        return label;
+        return id;
       }
+
 
       $(()=>{
           //alert("Hello");
