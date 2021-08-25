@@ -48,8 +48,10 @@
 
   <script>
       function showChart(label,id,lab,data,width,height){
-        var canVas = document.getElementById(id).getContext('2d');
-        var myChart = new Chart(canVas,{
+        var myCanvas = document.getElementById(id);
+        //.getContext('2d');
+        var ctx = myCanvas.getContext('2d');
+        var myChart = new Chart(myCanvas,{
           type:"line",
           backgroundColor: 'rgba(255, 251, 230, 0.5)',
           data: {
