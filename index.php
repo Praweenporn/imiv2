@@ -44,26 +44,7 @@
   </body>
 
   <script>
-      function loadData(){
-        var lb = [];
-        var data1 = [];
-        var data2 = [];
-
-        let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=50";
-          $.getJSON(url,function(data){
-              let feeds = data.feeds;
-              console.log(feeds[0]);
-              $("#lastTemperature").text(feeds[0].field2+ " C");
-              $("#lastHumidity").text(feeds[0].field1+ " %");
-              $("#lastUpdate").text(feeds[0].created_at);
-         
-          for (let i = 0; i < feeds.length; i++){
-            lb[i] i++;
-            data1[i] = feeds[i].field1;
-            data2[i] = feeds[i].field2; 
-        });
-      });
-      }
+      
 
       function showChart(label,id,lb,data){
         var canvas = document.getElementById("canvas").getContext("2d");
@@ -83,14 +64,35 @@
 
       $(()=>{
           //alert("Hello");
-          var plot_data = Object();
+        var lb = [];
+        var data1 = [];
+        var data2 = [];
+
+        let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=50";
+          $.getJSON(url,function(data){
+              let feeds = data.feeds;
+              console.log(feeds[0]);
+              $("#lastTemperature").text(feeds[0].field2+ " C");
+              $("#lastHumidity").text(feeds[0].field1+ " %");
+              $("#lastUpdate").text(feeds[0].created_at);
+         
+          for (let i = 0; i < feeds.length; i++){
+            lb[i] = i++;
+            data1[i] = feeds[i].field1;
+            data2[i] = feeds[i].field2; 
+        }
+
           var id1 = 'myChart1';
           var id2 = 'myChart2';
           var label1 = 'Humidity';
           var label2 = 'Temperature';
-          loadData(plot_data);
-          showChart(plot_data,id1,label1,ld);
-          showChart(plot_data,id2,label2,ld);
+
+          showChart(data1,id1,label1,ld);
+          showChart(ata2,id2,label2,ld);
+        });
+          console.log(ld);
+          console.log(label1);
+          console.log(label2);
       });
   </script>
 </html>
