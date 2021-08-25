@@ -9,7 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"> </script>
   </head>
   <body>
-  <script src="javascript/game.js">
     <div class="container">
       <div class="row">
         <div class="col-6">
@@ -51,10 +50,10 @@
       function showChart(label,id,lab,data,width,height){
         var myCanvas = document.getElementById(id);
         //.getContext('2d');
-        var ctx = myCanvas.getContext('2d');
+        var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
-          backgroundColor: 'rgba(255, 251, 230, 0.5)',
+          backgroundColor:'rgba(255, 251, 230, 0.5)',
           data: {
             labels: lab,
             datasets:[
