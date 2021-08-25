@@ -47,7 +47,7 @@
   </body>
 
   <script>
-      function showChart(label,id,lab,data,width,height){
+      $function showChart(label,id,lab,data,width,height){
         var myCanvas = document.getElementById(id);
         //.getContext('2d');
         var ctx = myCanvas.getContext("2d");
