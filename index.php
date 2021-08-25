@@ -64,7 +64,7 @@
         });
       }
 
-      function showChart2(data,lab,id,label){
+      function showChart2(data,lab,id,label,width,height){
         var myCanvas = document.getElementById("chart2");
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
