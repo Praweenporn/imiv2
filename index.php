@@ -60,10 +60,6 @@
               {
                 label: label,
                 data: data
-              },
-              {
-                label: label,
-                data: data
               }
             ]
           }
