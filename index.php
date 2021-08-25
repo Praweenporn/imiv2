@@ -47,24 +47,9 @@
   </body>
 
   <script>
-    
       function showChart(label,id,lab,data){
-        var canVas1 = document.getElementById("canvas1").getContext('2d');
-        var canVas2 = document.getElementById("canvas2").getContext('2d');
-        var myChart1 = new Chart(canVas1, {
-          type:"line",
-          backgroundColor: 'rgba(255, 251, 230, 0.5)',
-          data: {
-            labels: lab,
-            datasets:[
-              {
-                label: label,
-                data: data
-              }
-            ]
-          }
-        });
-        var myChart2 = new Chart(canVas2, {
+        var canVas = document.getElementById(id).getContext('2d');
+        var myChart = new Chart(canVas,{
           type:"line",
           backgroundColor: 'rgba(255, 251, 230, 0.5)',
           data: {
