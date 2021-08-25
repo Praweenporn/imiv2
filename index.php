@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <title>Web Frontend DHT11</title>
+    <title>DHT11 Web</title>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"> </script>
   </head>
@@ -47,10 +47,25 @@
   </body>
 
   <script>
-      function showChart(data,lab,id,label){
+      function showChart1(data,lab,id,label){
         var myCanvas = document.getElementById("chart1");
-        var myCanvas = document.getElementById("chart2");
+        var ctx = myCanvas.getContext("2d");
+        var myChart = new Chart(myCanvas,{
+          type:"line",
+          data: {
+            labels: lab,
+            datasets:[
+              {
+                label: label,
+                data: data
+              }
+            ]
+          }
+        });
+      }
 
+      function showChart2(data,lab,id,label){
+        var myCanvas = document.getElementById("chart2");
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
@@ -91,8 +106,8 @@
           var label1 = "Humidity";
           var label2 = "Temperature";
 
-          showChart(data1,lab,id1,label1);
-          showChart(data2,lab,id2,label2);
+          showChart1(data1,lab,id1,label1);
+          showChart2(data2,lab,id2,label2);
         });
           console.log(lab);
           console.log(data1);
