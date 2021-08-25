@@ -76,8 +76,10 @@
 
         if(label == "Humidity"){
           data = plot_data.data;
+          showChart(plot_data,id1,label1);
         } else if (label == "Temperature"){
           data = plot_data.data1;
+          showChart(plot_data,id2,label2);
         }
         var i =  plot_data.i;   
         var mychart = new Chart(canvas, {
@@ -88,10 +90,6 @@
               {
                 label: label,
                 data: data
-              },
-              {
-                label: label,
-                data: data1
               }
             ]
           }
@@ -107,8 +105,8 @@
           var label1 = "myChart1";
           var label2 = "myChart2";
           loadData(plot_data);
-          showChart(plot_data,id1,label1);
-          showChart(plot_data,id2,label2);
+          //showChart(plot_data,id1,label1);
+          //showChart(plot_data,id2,label2);
       });
   </script>
 </html>
