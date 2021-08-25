@@ -50,7 +50,7 @@
       
 
       function showChart(label,id,lb,data){
-        var canvas = document.getElementById("canvas").getContext("2d");
+        var canvas = document.getElementById(id).getContext("2d");
 
         var myChart = new Chart(canvas, {
           type:"line",
@@ -74,7 +74,7 @@
         let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=50";
           $.getJSON(url,function(data){
               let feeds = data.feeds;
-              console.log(feeds[0]);
+              console.log(data);
               $("#lastTemperature").text(feeds[0].field2+ " C");
               $("#lastHumidity").text(feeds[0].field1+ " %");
               $("#lastUpdate").text(feeds[0].created_at);
