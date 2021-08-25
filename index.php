@@ -59,7 +59,7 @@
               {
                 label: label,
                 data: data,
-                backgroundColor: "rgb(0,102,102)",
+                backgroundColor: "rgb(0,153,153)",
                 borderColor: "rgb(0, 255, 255)"
               }
             ]
