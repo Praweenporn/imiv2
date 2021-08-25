@@ -76,8 +76,8 @@
               {
                 label: label,
                 data: data,
-                backgroundColor: fillPattern,
-                borderColor: "rgba(0, 0, 0, 0.1)"
+                backgroundColor: "rgba(220,220,220,0.8)",
+                borderColor: "rgb(255, 255, 255)"
               }
             ]
           }
