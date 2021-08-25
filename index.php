@@ -14,6 +14,9 @@
         <div class="col-6">
           <canvas id="canvas" width="400" height="200"></canvas>
         </div>
+        <div class="col-6">
+          <canvas id="canvas2" width="400" height="200"></canvas>
+        </div>
       </div>
 
       <div class="class row">
@@ -82,8 +85,8 @@
             data2[i] = feeds[i].field2; 
         }
 
-          var id1 = 'myChart1';
-          var id2 = 'myChart2';
+          var id1 = 'canvas';
+          var id2 = 'canvas2';
           var label1 = 'Humidity';
           var label2 = 'Temperature';
 
