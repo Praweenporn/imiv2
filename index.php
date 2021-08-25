@@ -59,8 +59,8 @@
               {
                 label: label,
                 data: data,
-                backgroundColor: "rgb(153,76,0)",
-                borderColor: "rgb(255, 128, 0)"
+                backgroundColor: "rgb(0,102,102)",
+                borderColor: "rgb(0, 255, 255)"
               }
             ]
           }
@@ -78,8 +78,8 @@
               {
                 label: label,
                 data: data,
-                backgroundColor: "rgb(76,153,64)",
-                borderColor: "rgb(255, 255, 0)"
+                backgroundColor: "rgb(204,102,0)",
+                borderColor: "rgb(255, 153, 51)"
               }
             ]
           }
