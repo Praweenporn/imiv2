@@ -12,7 +12,7 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <canvas id="myChart" width="400" height="200"></canvas>
+          <canvas id="canvas" width="400" height="200"></canvas>
         </div>
       </div>
 
@@ -71,7 +71,7 @@
       }
 
       function showChart(plot_data,label,id){
-        var canvas = document.getElementById("myChart").getContext("2d");
+        var canvas = document.getElementById("canvas").getContext("2d");
         var data;
 
         if(label == "Humidity"){
@@ -80,7 +80,7 @@
           data = plot_data.data1;
         }
         var xlabel =  plot_data.xlabel;   
-        var mychart = new Chart(ctx, {
+        var mychart = new Chart(canvas, {
           type:"line",
           data: {
             labels: xlabel,
