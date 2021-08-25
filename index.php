@@ -57,29 +57,19 @@
               $("#lastHumidity").text(feeds[0].field1+ " %");
               $("#lastUpdate").text(feeds[0].created_at);
          
-          $.each(feeds, (k, v)=>{
-            lb.push(k+1);
-            data1.push(v.field1);
-            data2.push(v.field2);
+          for (let i = 0; i < feeds.length; i++){
+            lb[i] i++;
+            data1[i] = feeds[i].field1;
+            data2[i] = feeds[i].field2; 
         });
       });
-
-        plot_data.lb = lb;
-        plot_data.data = data1;
-        plot_data.data1 = data2;
         console.log(plot_data);
       }
 
       function showChart(label,id,lb,data){
-        var canvas = document.getElementById(lb).getContext("2d");
+        var canvas = document.getElementById(id).getContext("2d");
         var data;
 
-        if(label == "Humidity"){
-          data = plot_data.data;
-        } else if (label == "Temperature"){
-          data = plot_data.data1;
-        }
-        var lb =  plot_data.lb;   
         var myChart = new Chart(canvas, {
           type:"line",
           data: {
@@ -100,7 +90,6 @@
         });
       }
 
-
       $(()=>{
           //alert("Hello");
           var plot_data = Object();
@@ -109,8 +98,8 @@
           var label1 = 'Humidity';
           var label2 = 'Temperature';
           loadData(plot_data);
-          showChart(plot_data,id1,label1);
-          showChart(plot_data,id2,label2);
+          showChart(plot_data,id1,label1,ld);
+          showChart(plot_data,id2,label2,ld);
       });
   </script>
 </html>
