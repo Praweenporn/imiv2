@@ -94,8 +94,8 @@
           showChart(data2,id2,label2,lab);
         });
           console.log(lab);
-          console.log(data);
-          console.log(data);
+          console.log(data1);
+          console.log(data2);
       });
   </script>
 </html>
