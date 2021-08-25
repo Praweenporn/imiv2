@@ -47,10 +47,10 @@
   </body>
 
   <script>
-      function showChart(label,id,lab,data,width,height){
+      function showChart(label,id,lab,data){
         var myCanvas = document.getElementById("chart1");
         var myCanvas = document.getElementById("chart2");
-        //.getContext('2d');
+
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
@@ -60,7 +60,11 @@
             datasets:[
               {
                 label: label,
-                data: data
+                data: data1
+              },
+              {
+                label: label,
+                data: data2
               }
             ]
           }
