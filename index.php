@@ -58,7 +58,9 @@
             datasets:[
               {
                 label: label,
-                data: data
+                data: data,
+                backgroundColor: "rgb(153,76,0)",
+                borderColor: "rgb(255, 128, 0)"
               }
             ]
           }
@@ -76,8 +78,8 @@
               {
                 label: label,
                 data: data,
-                backgroundColor: "rgb(64,64,64)",
-                borderColor: "rgb(128, 255, 0)"
+                backgroundColor: "rgb(76,153,64)",
+                borderColor: "rgb(255, 255, 0)"
               }
             ]
           }
