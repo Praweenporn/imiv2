@@ -66,8 +66,7 @@
           }
         });
         console.log(lab);
-        console.log(data1);
-        console.log(data2);
+        console.log(data);
       }
 
       function showChart2(data,lab,id,label,width,height){
@@ -88,8 +87,8 @@
           }
         });
         console.log(lab);
-        console.log(data1);
-        console.log(data2);
+        console.log(data);
+
       }
 
       $(()=>{
@@ -120,7 +119,7 @@
           showChart1(data1,lab,id1,label1);
           showChart2(data2,lab,id2,label2);
         });
-         
+
       });
   </script>
 </html>
