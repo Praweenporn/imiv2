@@ -60,11 +60,11 @@
             datasets:[
               {
                 label: label,
-                data: data1
+                data: data
               },
               {
                 label: label,
-                data: data2
+                data: data
               }
             ]
           }
