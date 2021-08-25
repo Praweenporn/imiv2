@@ -65,6 +65,9 @@
             ]
           }
         });
+        console.log(lab);
+        console.log(data1);
+        console.log(data2);
       }
 
       function showChart2(data,lab,id,label,width,height){
@@ -85,8 +88,8 @@
           }
         });
         console.log(lab);
-          console.log(data1);
-          console.log(data2);
+        console.log(data1);
+        console.log(data2);
       }
 
       $(()=>{
