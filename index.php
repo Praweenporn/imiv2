@@ -49,12 +49,12 @@
         var data1 = [];
         var data2 = [];
 
-      
+        let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=50";
           $.getJSON(url,function(data){
               let feeds = data.feeds;
               console.log(feeds[0]);
-              $("#lastTemperature").text(feeds[0].field2+  " C");
-              $("#lastHumidity").text(feeds[0].field1+  " %");
+              $("#lastTemperature").text(feeds[0].field2+ " C");
+              $("#lastHumidity").text(feeds[0].field1+ " %");
               $("#lastUpdate").text(feeds[0].created_at);
          
           $.each(feeds, (k, v)=>{
@@ -97,7 +97,6 @@
 
       $(()=>{
           //alert("Hello");
-          let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=50";
           var plot_data = Object();
           var id1 = "myChart1";
           var id2 = "myChart2";
