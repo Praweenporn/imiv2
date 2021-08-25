@@ -60,6 +60,7 @@
               {
                 label: label,
                 data: data
+              }
             ]
           }
         });
