@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"> </script>
   </head>
   <body>
-    <p><h1 align="center"> Praweenporn Mathurot </h1></p>
+    <br><h1 align="center"> Praweenporn Mathurot </h1></br>
     <div class="container">
       <div class="row">
         <div class="col-6">
@@ -23,7 +23,7 @@
       <div class="class row">
         <div class="class col-3">
           <div class="class row">
-            <div class="class col-4"><b>Temperature</b></div>
+            <div class="class col-4"><br><b>Temperature</b></br></div>
             <div class="col-8" >
               <span id="lastTemperature"></span>
             </div>      
