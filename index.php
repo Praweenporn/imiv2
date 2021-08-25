@@ -47,10 +47,13 @@
   </body>
 
   <script>
-      $function showChart(label,id,lab,data,width,height){
+      $(function showChart(label,id,lab,data,width,height){
         var myCanvas = document.getElementById(id);
         //.getContext('2d');
-        var ctx = myCanvas.getContext("2d");
+        if (myCanvas.getContext){
+          var ctx = myCanvas.getContext("2d");
+        }
+       
         var myChart = new Chart(myCanvas,{
           type:"line",
           backgroundColor:'rgba(255, 251, 230, 0.5)',
@@ -64,7 +67,7 @@
             ]
           }
         });
-      }
+      })ว
 
       $(()=>{
           //alert("Hello");
