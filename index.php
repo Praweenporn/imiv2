@@ -88,6 +88,10 @@
               {
                 label: label,
                 data: data
+              },
+              {
+                label: label,
+                data: data1
               }
             ]
           }
@@ -99,9 +103,9 @@
           //alert("Hello");
           var plot_data = Object();
           var id1 = "Humidity";
-          var id2 = "myChart2";
-          var label1 = "Humidity";
-          var label2 = "Temperature";
+          var id2 = "Temperature";
+          var label1 = "myChart1";
+          var label2 = "myChart2";
           loadData(plot_data);
           showChart(plot_data,id1,label1);
           showChart(plot_data,id2,label2);
