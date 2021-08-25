@@ -25,7 +25,7 @@
           <div class="class row">
             <div class="class col-4"><br><b>Temperature</b></br></div>
             <div class="col-8" >
-              <span id="lastTemperature"></span>
+              <br><span id="lastTemperature"></span></br>
             </div>      
           </div>
 
