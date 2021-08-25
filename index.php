@@ -45,7 +45,7 @@
 
   <script>
       function loadData(plot_data){
-        var i = [];
+        var lb = [];
         var data1 = [];
         var data2 = [];
 
@@ -58,20 +58,20 @@
               $("#lastUpdate").text(feeds[0].created_at);
          
           $.each(feeds, (k, v)=>{
-            i.push(k+1);
+            lb.push(k+1);
             data1.push(v.field1);
             data2.push(v.field2);
         });
       });
 
-        plot_data.i = i;
+        plot_data.lb = lb;
         plot_data.data = data1;
         plot_data.data1 = data2;
         console.log(plot_data);
       }
 
-      function showChart(label,id,i,data){
-        var canvas = document.getElementById(id).getContext("2d");
+      function showChart(label,id,lb,data){
+        var canvas = document.getElementById(lb).getContext("2d");
         var data;
 
         if(label == "Humidity"){
@@ -79,15 +79,21 @@
         } else if (label == "Temperature"){
           data = plot_data.data1;
         }
-        var i =  plot_data.i;   
-        var mychart = new Chart(canvas, {
+        var lb =  plot_data.lb;   
+        var myChart = new Chart(canvas, {
           type:"line",
           data: {
-            labels: i,
+            labels: lb,
             datasets:[
               {
                 label: label,
-                data: data
+                data: data,
+                options: {
+                responsive: true,
+                plugins: {
+                legend: {
+                position: 'top',
+                }
               }
             ]
           }
