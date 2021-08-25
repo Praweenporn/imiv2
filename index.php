@@ -52,6 +52,7 @@
         var canVas = document.getElementById(id).getContext("2d");
         var myChart = new Chart(canVas, {
           type:"line",
+          backgroundColor: 'rgba(255, 251, 230, 0.5)',
           data: {
             labels: lab,
             datasets:[
@@ -93,8 +94,8 @@
           showChart(data2,id2,label2,lab);
         });
           console.log(lab);
-          console.log(label1);
-          console.log(label2);
+          console.log(data);
+          console.log(data);
       });
   </script>
 </html>
