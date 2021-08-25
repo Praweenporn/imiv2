@@ -9,8 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"> </script>
   </head>
   <body>
-  <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
-  <script src="javascript/game.js"></script>
+  <script src="javascript/game.js">
     <div class="container">
       <div class="row">
         <div class="col-6">
