@@ -84,6 +84,9 @@
             ]
           }
         });
+        console.log(lab);
+          console.log(data1);
+          console.log(data2);
       }
 
       $(()=>{
@@ -114,9 +117,7 @@
           showChart1(data1,lab,id1,label1);
           showChart2(data2,lab,id2,label2);
         });
-          console.log(lab);
-          console.log(data1);
-          console.log(data2);
+         
       });
   </script>
 </html>
