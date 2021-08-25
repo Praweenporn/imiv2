@@ -98,7 +98,7 @@
       $(()=>{
           //alert("Hello");
           var plot_data = Object();
-          var id1 = "myChart1";
+          var id1 = "Humidity";
           var id2 = "myChart2";
           var label1 = "Humidity";
           var label2 = "Temperature";
