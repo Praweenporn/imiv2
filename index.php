@@ -12,7 +12,7 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <canvas id="canvas" width="400" height="200"></canvas>
+          <canvas id="canvas1" width="400" height="200"></canvas>
         </div>
         <div class="col-6">
           <canvas id="canvas2" width="400" height="200"></canvas>
@@ -48,13 +48,12 @@
 
   <script>
     
-      function showChart(label,id,lb,data){
+      function showChart(label,id,lab,data){
         var canVas = document.getElementById(id).getContext("2d");
-
         var myChart = new Chart(canVas, {
           type:"line",
           data: {
-            labels: lb,
+            labels: lab,
             datasets:[
               {
                 label: label,
@@ -67,7 +66,7 @@
 
       $(()=>{
           //alert("Hello");
-        var lb = [];
+        var lab = [];
         var data1 = [];
         var data2 = [];
 
@@ -80,20 +79,20 @@
               $("#lastUpdate").text(feeds[0].created_at);
          
           for (let i = 0; i < feeds.length; i++){
-            lb[i] = i++;
+            lab[i] = i++;
             data1[i] = feeds[i].field1;
             data2[i] = feeds[i].field2; 
         }
 
-          var id1 = 'canvas';
-          var id2 = 'canvas2';
-          var label1 = 'Humidity';
-          var label2 = 'Temperature';
+          var id1 = "canvas1";
+          var id2 = "canvas2";
+          var label1 = "Humidity";
+          var label2 = "Temperature";
 
-          showChart(data1,id1,label1,ld);
-          showChart(ata2,id2,label2,ld);
+          showChart(data1,id1,label1,lab);
+          showChart(data2,id2,label2,lab);
         });
-          console.log(ld);
+          console.log(lab);
           console.log(label1);
           console.log(label2);
       });
