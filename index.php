@@ -80,7 +80,7 @@
               $("#lastUpdate").text(feeds[0].created_at);
          
           for (let i = 0; i < feeds.length; i++){
-            lab[i] = i++;
+            lab[i] = i+1;
             data1[i] = feeds[i].field1;
             data2[i] = feeds[i].field2; 
         }
@@ -90,8 +90,8 @@
           var label1 = "Humidity";
           var label2 = "Temperature";
 
-          showChart(data1,id1,label1,lab);
-          showChart(data2,id2,label2,lab);
+          showChart(data1,lab,id1,label1);
+          showChart(data2,lab,id2,label2);
         });
           console.log(lab);
           console.log(data1);
