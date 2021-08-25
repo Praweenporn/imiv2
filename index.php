@@ -44,7 +44,7 @@
   </body>
 
   <script>
-      function loadData(plot_data){
+      function loadData(){
         var lb = [];
         var data1 = [];
         var data2 = [];
@@ -63,7 +63,6 @@
             data2[i] = feeds[i].field2; 
         });
       });
-        console.log(plot_data);
       }
 
       function showChart(label,id,lb,data){
@@ -77,14 +76,7 @@
             datasets:[
               {
                 label: label,
-                data: data,
-                options: {
-                responsive: true,
-                plugins: {
-                legend: {
-                position: 'top',
-                }
-              }
+                data: data
             ]
           }
         });
