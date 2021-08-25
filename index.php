@@ -47,14 +47,13 @@
   </body>
 
   <script>
-      function showChart(label,id,lab,data){
+      function showChart(data,lab,id,label){
         var myCanvas = document.getElementById("chart1");
         var myCanvas = document.getElementById("chart2");
 
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
-          backgroundColor:'rgba(255, 251, 230, 0.5)',
           data: {
             labels: lab,
             datasets:[
