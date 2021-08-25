@@ -70,8 +70,8 @@
         console.log(plot_data);
       }
 
-      function showChart(plot_data,label,id,i,data){
-        var canvas = document.getElementById("canvas").getContext("2d");
+      function showChart(label,id,i,data){
+        var canvas = document.getElementById(id).getContext("2d");
         var data;
 
         if(label == "Humidity"){
