@@ -12,10 +12,10 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <canvas id="canvas1" width="400" height="200"></canvas>
+          <canvas id="chart1" width="400" height="200"></canvas>
         </div>
         <div class="col-6">
-          <canvas id="canvas2" width="400" height="200"></canvas>
+          <canvas id="chart2" width="400" height="200"></canvas>
         </div>
       </div>
 
@@ -47,7 +47,7 @@
   </body>
 
   <script>
-      function showChart(label,id,lab,data){
+      function showChart(label,id,lab,data,width,height){
         var canVas = document.getElementById(id).getContext('2d');
         var myChart = new Chart(canVas,{
           type:"line",
