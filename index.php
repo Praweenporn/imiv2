@@ -66,8 +66,7 @@
       }
 
       function showChart(label,id,lb,data){
-        var canvas = document.getElementById(id).getContext("2d");
-        var data;
+        var canvas = document.getElementById("canvas").getContext("2d");
 
         var myChart = new Chart(canvas, {
           type:"line",
