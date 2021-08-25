@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"> </script>
   </head>
   <body>
-    <br><h1 align="center"> Praweenporn Mathurot </h1></br>
+    <br><h1 align="center">Monitor Temperature & Humidity: Praweenporn Mathurot </h1></br>
     <div class="container">
       <div class="row">
         <div class="col-6">
@@ -19,20 +19,20 @@
           <canvas id="chart2" width="400" height="200"></canvas>
         </div>
       </div>
-
+      
       <div class="class row">
         <div class="class col-3">
           <div class="class row">
-            <div class="class col-4"><br><b>Temperature</b></br></div>
+            <div class="class col-4"><br><b>Humidity</b></br></div>
             <div class="col-8" >
-              <br><span id="lastTemperature"></span></br>
+              <br><span id="lastHumidity"></span></br>
             </div>      
           </div>
 
           <div class="class row">
-            <div class="class col-4"><b>Humidity</b></div>
+            <div class="class col-4"><b>Temperature</b></div>
             <div class="col-8" >
-              <span id="lastHumidity"></span>
+              <span id="lastTemperature"></span>
             </div>
           </div>
 
