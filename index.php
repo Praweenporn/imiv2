@@ -70,7 +70,7 @@
         console.log(plot_data);
       }
 
-      function showChart(plot_data,label,id){
+      function showChart(plot_data,label,id,i,data){
         var canvas = document.getElementById("canvas").getContext("2d");
         var data;
 
@@ -98,10 +98,10 @@
       $(()=>{
           //alert("Hello");
           var plot_data = Object();
-          var id1 = "myChart1";
-          var id2 = "myChart2";
-          var label1 = "Humidity";
-          var label2 = "Temperature";
+          var id1 = 'myChart1';
+          var id2 = 'myChart2';
+          var label1 = 'Humidity';
+          var label2 = 'Temperature';
           loadData(plot_data);
           showChart(plot_data,id1,label1);
           showChart(plot_data,id2,label2);
