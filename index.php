@@ -47,12 +47,11 @@
   </body>
 
   <script>
-      
-
+    
       function showChart(label,id,lb,data){
-        var canvas = document.getElementById(id).getContext("2d");
+        var canVas = document.getElementById(id).getContext("2d");
 
-        var myChart = new Chart(canvas, {
+        var myChart = new Chart(canVas, {
           type:"line",
           data: {
             labels: lb,
