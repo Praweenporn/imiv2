@@ -45,7 +45,7 @@
 
   <script>
       function loadData(plot_data){
-        var xlabel = [];
+        var i = [];
         var data1 = [];
         var data2 = [];
 
@@ -58,13 +58,13 @@
               $("#lastUpdate").text(feeds[0].created_at);
          
           $.each(feeds, (k, v)=>{
-            xlabel.push(k+1);
+            i.push(k+1);
             data1.push(v.field1);
             data2.push(v.field2);
         });
       });
 
-        plot_data.xlabel = xlabel;
+        plot_data.i = i;
         plot_data.data = data1;
         plot_data.data1 = data2;
         console.log(plot_data);
@@ -79,11 +79,11 @@
         } else if (label == "Temperature"){
           data = plot_data.data1;
         }
-        var xlabel =  plot_data.xlabel;   
+        var i =  plot_data.i;   
         var mychart = new Chart(canvas, {
           type:"line",
           data: {
-            labels: xlabel,
+            labels: i,
             datasets:[
               {
                 label: label,
