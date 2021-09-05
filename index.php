@@ -42,12 +42,28 @@
             </div>
           </div>
 
+          
+          <div class="class row">
+            <div class="class col-4"><b>Light value</b></div>
+            <div class="col-8" >
+              <span id="lastLightvalue"></span>
+            </div>
+          </div>
+
+          <div class="class row">
+            <div class="class col-4"><b>Light Status</b></div>
+            <div class="col-8" >
+              <span id="lastLightStatus"></span>
+            </div>
+          </div>
+
           <div class="class row">
             <div class="class col-4"><b>Update</b></div>
             <div class="col-8" >
               <span id="lastUpdate"></span>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -108,8 +124,8 @@
               {
                 label: label,
                 data: data,
-                backgroundColor: "rgb(0,153,153)",
-                borderColor: "rgb(0, 255, 255)"
+                backgroundColor: "rgb(255,255,0)",
+                borderColor: "rgb(102, 102, 0)"
               }
             ]
           }
@@ -129,8 +145,8 @@
               {
                 label: label,
                 data: data,
-                backgroundColor: "rgb(0,153,153)",
-                borderColor: "rgb(0, 255, 255)"
+                backgroundColor: "rgb(0,255,0)",
+                borderColor: "rgb(0, 102, 0)"
               }
             ]
           }
@@ -153,8 +169,8 @@
               console.log(data);
               $("#lastTemperature").text(feeds[0].field2+ " C");
               $("#lastHumidity").text(feeds[0].field1+ " %");
-              $("#Light value").text(feeds[0].field3+ " Lux");
-              $("#Light Status").text(feeds[0].field4);
+              $("#lastLightvalue").text(feeds[0].field3+ " Lux");
+              $("#lastLightStatus").text(feeds[0].field4);
               $("#lastUpdate").text(feeds[0].created_at);
          
           for (let i = 0; i < feeds.length; i++){
