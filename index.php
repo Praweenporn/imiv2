@@ -18,6 +18,12 @@
         <div class="col-6">
           <canvas id="chart2" width="400" height="200"></canvas>
         </div>
+        <div class="col-6">
+          <canvas id="chart3" width="400" height="200"></canvas>
+        </div>
+        <div class="col-6">
+          <canvas id="chart4" width="400" height="200"></canvas>
+        </div>
       </div>
       
       <div class="class row">
