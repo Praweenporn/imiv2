@@ -10,7 +10,7 @@
   </head>
   <body>
     <br><h1 align="center">Monitor Temperature & Humidity: Praweenporn Mathurot </h1></br>
-    <h3>Update<span id="lastUpdate"></span></h3>
+    <h4 align="center">Update <span id="lastUpdate"></span></h4>
     <div class="container">
       <div class="row">
         <div class="col-6">
