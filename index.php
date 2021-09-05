@@ -40,14 +40,14 @@
       function timedRefresh(timeoutPeriod) {
       setTimeout("location.reload(true);",timeoutPeriod);
       var dt = new Date();
-      document.getElementById('date-time').innerHTML=dt;
+    document.getElementById('date-time').innerHTML=dt;
  }
 </script>
   </body>
 
   <script>
       function showChart1(data,lab,id,label,width,height){
-        var myCanvas = document.getElementById(id);
+        var myCanvas = document.getElementById("chart1");
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
@@ -68,7 +68,7 @@
       }
 
       function showChart2(data,lab,id,label,width,height){
-        var myCanvas = document.getElementById(id);
+        var myCanvas = document.getElementById("chart2");
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
@@ -90,7 +90,7 @@
       }
 
       function showChart3(data,lab,id,label,width,height){
-        var myCanvas = document.getElementById(id);
+        var myCanvas = document.getElementById("chart3");
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
@@ -111,7 +111,7 @@
       }
 
       function showChart4(data,lab,id,label,width,height){
-        var myCanvas = document.getElementById(id);
+        var myCanvas = document.getElementById("chart4");
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
@@ -143,11 +143,11 @@
           $.getJSON(url,function(data){
               let feeds = data.feeds;
               console.log(data);
-              $("#lastTemperature").text(feeds[0].field2+ " C");
-              $("#lastHumidity").text(feeds[0].field1+ " %");
-              $("#lastLightvalue").text(feeds[0].field3+ " Lux");
-              $("#lastLightStatus").text(feeds[0].field4);
-              $("#lastUpdate").text(feeds[0].created_at);
+              $("#lastTemperature").text(feeds[feeds.length-1].field2+ " C");
+              $("#lastHumidity").text(feeds[feeds.length-1].field1+ " %");
+              $("#lastLightvalue").text(feeds[feeds.length-1].field3+ " Lux");
+              $("#lastLightStatus").text(feeds[feeds.length-1].field4);
+              $("#lastUpdate").text(feeds[feeds.length-1].created_at);
          
           for (let i = 0; i < feeds.length; i++){
             lab[i] = i+1;
