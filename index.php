@@ -97,7 +97,7 @@
 
       }
 
-      function showChart1(data,lab,id,label,width,height){
+      function showChart3(data,lab,id,label,width,height){
         var myCanvas = document.getElementById("chart3");
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
@@ -118,7 +118,7 @@
         console.log(data);
       }
 
-      function showChart1(data,lab,id,label,width,height){
+      function showChart4(data,lab,id,label,width,height){
         var myCanvas = document.getElementById("chart4");
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
@@ -147,7 +147,7 @@
         var data3 = [];
         var data4 = [];
 
-        let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=240";
+        let url="GET https://api.thingspeak.com/channels/1497536/feeds.json?results=240";
           $.getJSON(url,function(data){
               let feeds = data.feeds;
               console.log(data);
