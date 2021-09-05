@@ -24,12 +24,12 @@
         </div>
 
         <div class="col-6">
-        <br><canvas id="chart3" width="400" height="200"></canvas></br>
+        <p><canvas id="chart3" width="400" height="200"></canvas></p>
         <p><h6 align="center"><b>Light value : </b><span id="lastLightvalue"></span></h6></p>
         </div>
       
         <div class="col-6">
-        <br><canvas id="chart4" width="400" height="200"></canvas></br>
+        <p><canvas id="chart4" width="400" height="200"></canvas></p>
         <p><h6 align="center"><b>Light Status : </b><span id="lastLightStatus"></span></h6></p>
         </div>
       </div>
