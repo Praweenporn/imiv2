@@ -35,7 +35,14 @@
         <p></p>
         </div>
       </div>
-      
+
+      <script type="text/JavaScript">
+      function timedRefresh(timeoutPeriod) {
+      setTimeout("location.reload(true);",timeoutPeriod);
+      var dt = new Date();
+      document.getElementById('date-time').innerHTML=dt;
+ }
+</script>
   </body>
 
   <script>
