@@ -151,18 +151,26 @@
               console.log(data);
               $("#lastTemperature").text(feeds[0].field2+ " C");
               $("#lastHumidity").text(feeds[0].field1+ " %");
+              $("#Light value").text(feeds[0].field3+ " Lux");
+              $("#Light Status").text(feeds[0].field4);
               $("#lastUpdate").text(feeds[0].created_at);
          
           for (let i = 0; i < feeds.length; i++){
             lab[i] = i+1;
             data1[i] = feeds[i].field1;
             data2[i] = feeds[i].field2; 
+            data3[i] = feeds[i].field3;
+            data4[i] = feeds[i].field4; 
         }
 
           var id1 = "canvas1";
           var id2 = "canvas2";
+          var id1 = "canvas3";
+          var id2 = "canvas4";
           var label1 = "Humidity";
           var label2 = "Temperature";
+          var label3 = "Light value";
+          var label4 = "Light Status";
 
           showChart1(data1,lab,id1,label1);
           showChart2(data2,lab,id2,label2);
