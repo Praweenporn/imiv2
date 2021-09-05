@@ -44,15 +44,15 @@
 
           
           <div class="class row">
-            <div class="class col-4"><b>Light value</b></div>
-            <div class="col-6" >
+            <div class="class col-6"><b>Light value</b></div>
+            <div class="col-8" >
               <span id="lastLightvalue"></span>
             </div>
           </div>
 
           <div class="class row">
-            <div class="class col-4"><b>Light Status</b></div>
-            <div class="col-6" >
+            <div class="class col-6"><b>Light Status</b></div>
+            <div class="col-8" >
               <span id="lastLightStatus"></span>
             </div>
           </div>
