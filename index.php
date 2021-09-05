@@ -143,7 +143,9 @@
           //alert("Hello");
         var lab = [];
         var data1 = [];
-        var data2 = [];
+        var data2 = [];   
+        var data3 = [];
+        var data4 = [];
 
         let url="https://api.thingspeak.com/channels/1458414/feeds.json?results=240";
           $.getJSON(url,function(data){
@@ -174,8 +176,8 @@
 
           showChart1(data1,lab,id1,label1);
           showChart2(data2,lab,id2,label2);
-          showChart3(data1,lab,id1,label1);
-          showChart4(data2,lab,id2,label2);
+          showChart3(data3,lab,id3,label3);
+          showChart4(data4,lab,id4,label4);
         });
 
       });
