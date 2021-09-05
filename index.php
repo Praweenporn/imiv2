@@ -30,7 +30,7 @@
       
         <div class="col-6">
         <p><canvas id="chart4" width="400" height="200"></canvas></p>
-        <br><h6 align="center"><b>Light Status : </b><span id="lastLightStatus"></span></h6></br>
+        <p><h6 align="center"><b>Light Status : </b><span id="lastLightStatus"></span></h6></p>
         </div>
       </div>
       
