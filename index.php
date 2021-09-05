@@ -24,50 +24,16 @@
         </div>
 
         <div class="col-6">
-        <p><canvas id="chart3" width="400" height="200"></canvas></p>
+        <br><canvas id="chart3" width="400" height="200"></canvas></br>
         <p><h6 align="center"><b>Light value : </b><span id="lastLightvalue"></span></h6></p>
         </div>
       
         <div class="col-6">
-        <p><canvas id="chart4" width="400" height="200"></canvas></p>
+        <br><canvas id="chart4" width="400" height="200"></canvas></br>
         <p><h6 align="center"><b>Light Status : </b><span id="lastLightStatus"></span></h6></p>
         </div>
       </div>
       
-      <div class="class row">
-        <div class="class col-3">
-          <div class="class row">
-            <div class="class col-4"><br><b>Humidity</b></br></div>
-            <div class="col-8" >
-              <br><span id="lastHumidity"></span></br>
-            </div>      
-          </div>
-
-          <div class="class row">
-            <div class="class col-4"><b>Temperature</b></div>
-            <div class="col-8" >
-              <span id="lastTemperature"></span>
-            </div>
-          </div>
-
-          
-          <div class="class row">
-            <div class="class col-6"><b>Light value</b></div>
-            <div class="col-8" >
-              <span id="lastLightvalue"></span>
-            </div>
-          </div>
-
-          <div class="class row">
-            <div class="class col-6"><b>Light Status</b></div>
-            <div class="col-8" >
-              <span id="lastLightStatus"></span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
   </body>
 
   <script>
