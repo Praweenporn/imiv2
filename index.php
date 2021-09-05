@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-6">
           <canvas id="chart1" width="400" height="200"></canvas>
-          <br><b>Humidity:</b><span id="lastHumidity"></span></br>
+          <br><b align="center">Humidity: </b><span id="lastHumidity"></span></br>
         </div>
 
         <div class="col-6">
