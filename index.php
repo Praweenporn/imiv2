@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"> </script>
   </head>
-  <body>
+  <body onload="JavaScript:timedRefresh(15000);","startTime()">
     <p><h2 align="center">Monitor Temperature & Humidity: Praweenporn Mathurot </h2></bp>
     <p><h4 align="center">Update <span id="lastUpdate"></span></h4></p>
     <div class="container">
