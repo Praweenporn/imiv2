@@ -47,7 +47,7 @@
 
   <script>
       function showChart1(data,lab,id,label,width,height){
-        var myCanvas = document.getElementById("chart1");
+        var myCanvas = document.getElementById(id);
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
@@ -68,7 +68,7 @@
       }
 
       function showChart2(data,lab,id,label,width,height){
-        var myCanvas = document.getElementById("chart2");
+        var myCanvas = document.getElementById(id);
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
@@ -90,7 +90,7 @@
       }
 
       function showChart3(data,lab,id,label,width,height){
-        var myCanvas = document.getElementById("chart3");
+        var myCanvas = document.getElementById(id);
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
@@ -111,7 +111,7 @@
       }
 
       function showChart4(data,lab,id,label,width,height){
-        var myCanvas = document.getElementById("chart4");
+        var myCanvas = document.getElementById(id);
         var ctx = myCanvas.getContext("2d");
         var myChart = new Chart(myCanvas,{
           type:"line",
