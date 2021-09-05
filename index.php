@@ -97,6 +97,48 @@
 
       }
 
+      function showChart1(data,lab,id,label,width,height){
+        var myCanvas = document.getElementById("chart3");
+        var ctx = myCanvas.getContext("2d");
+        var myChart = new Chart(myCanvas,{
+          type:"line",
+          data: {
+            labels: lab,
+            datasets:[
+              {
+                label: label,
+                data: data,
+                backgroundColor: "rgb(0,153,153)",
+                borderColor: "rgb(0, 255, 255)"
+              }
+            ]
+          }
+        });
+        console.log(lab);
+        console.log(data);
+      }
+
+      function showChart1(data,lab,id,label,width,height){
+        var myCanvas = document.getElementById("chart4");
+        var ctx = myCanvas.getContext("2d");
+        var myChart = new Chart(myCanvas,{
+          type:"line",
+          data: {
+            labels: lab,
+            datasets:[
+              {
+                label: label,
+                data: data,
+                backgroundColor: "rgb(0,153,153)",
+                borderColor: "rgb(0, 255, 255)"
+              }
+            ]
+          }
+        });
+        console.log(lab);
+        console.log(data);
+      }
+
       $(()=>{
           //alert("Hello");
         var lab = [];
@@ -124,6 +166,8 @@
 
           showChart1(data1,lab,id1,label1);
           showChart2(data2,lab,id2,label2);
+          showChart3(data1,lab,id1,label1);
+          showChart4(data2,lab,id2,label2);
         });
 
       });
