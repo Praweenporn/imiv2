@@ -15,12 +15,13 @@
       <div class="row">
         <div class="col-6">
           <canvas id="chart1" width="400" height="200"></canvas>
+          <br><b>Humidity:</b><span id="lastHumidity"></span></br>
         </div>
 
         <div class="col-6">
           <canvas id="chart2" width="400" height="200"></canvas>
         </div>
-        
+
         <div class="col-6">
         <br><canvas id="chart3" width="400" height="200"></canvas></br>
         </div>
@@ -58,13 +59,6 @@
             <div class="class col-6"><b>Light Status</b></div>
             <div class="col-8" >
               <span id="lastLightStatus"></span>
-            </div>
-          </div>
-
-          <div class="class row">
-            <div class="class col-4"><b>Update</b></div>
-            <div class="col-6" >
-              <span id="lastUpdate"></span>
             </div>
           </div>
 
