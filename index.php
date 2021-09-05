@@ -140,10 +140,6 @@
         var data4 = [];
 
         let url="https://api.thingspeak.com/channels/1497536/feeds.json?results=240";
-        let url="https://api.thingspeak.com/channels/1497536/fields/1/last.json?api_key=MWZNGZT6GVY8HUEO";
-        let url="https://api.thingspeak.com/channels/1497536/fields/2/last.json?api_key=MWZNGZT6GVY8HUEO";
-        let url="https://api.thingspeak.com/channels/1497536/fields/3/last.json?api_key=MWZNGZT6GVY8HUEO";
-        let url="https://api.thingspeak.com/channels/1497536/fields/4/last.json?api_key=MWZNGZT6GVY8HUEO";
           $.getJSON(url,function(data){
               let feeds = data.feeds;
               console.log(data);
