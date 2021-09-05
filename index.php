@@ -190,7 +190,7 @@
           var label3 = "Light value";
           var label4 = "Light Status";
 
-          //showChart1(data1,lab,id1,label1);
+          showChart1(data1,lab,id1,label1);
           showChart2(data2,lab,id2,label2);
           showChart3(data3,lab,id3,label3);
           showChart4(data4,lab,id4,label4);
