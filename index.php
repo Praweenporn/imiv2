@@ -19,10 +19,10 @@
         <div class="col-6">
           <canvas id="chart2" width="400" height="200"></canvas>
         </div>
-        <br><div class="col-6">
-          <canvas id="chart3" width="400" height="200"></canvas>
+        <div class="col-6">
+        <br><canvas id="chart3" width="400" height="200"></canvas></br>
         </div>
-        </br>
+      
         <div class="col-6">
           <canvas id="chart4" width="400" height="200"></canvas>
         </div>
