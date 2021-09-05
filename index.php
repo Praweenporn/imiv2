@@ -16,15 +16,17 @@
         <div class="col-6">
           <canvas id="chart1" width="400" height="200"></canvas>
         </div>
+
         <div class="col-6">
           <canvas id="chart2" width="400" height="200"></canvas>
         </div>
+        
         <div class="col-6">
         <br><canvas id="chart3" width="400" height="200"></canvas></br>
         </div>
       
         <div class="col-6">
-          <canvas id="chart4" width="400" height="200"></canvas>
+        <br><canvas id="chart4" width="400" height="200"></canvas></br>
         </div>
       </div>
       
