@@ -167,8 +167,8 @@
 
           var id1 = "canvas1";
           var id2 = "canvas2";
-          var id1 = "canvas3";
-          var id2 = "canvas4";
+          var id3 = "canvas3";
+          var id4 = "canvas4";
           var label1 = "Humidity";
           var label2 = "Temperature";
           var label3 = "Light value";
