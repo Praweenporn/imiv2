@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"> </script>
   </head>
   <body>
-    <br><h2 align="center">Monitor Temperature & Humidity: Praweenporn Mathurot </h2></br>
+    <p><h2 align="center">Monitor Temperature & Humidity: Praweenporn Mathurot </h2></bp>
     <p><h4 align="center">Update <span id="lastUpdate"></span></h4></p>
     <div class="container">
       <div class="row">
