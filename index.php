@@ -45,21 +45,21 @@
           
           <div class="class row">
             <div class="class col-4"><b>Light value</b></div>
-            <div class="col-8" >
+            <div class="col-6" >
               <span id="lastLightvalue"></span>
             </div>
           </div>
 
           <div class="class row">
             <div class="class col-4"><b>Light Status</b></div>
-            <div class="col-8" >
+            <div class="col-6" >
               <span id="lastLightStatus"></span>
             </div>
           </div>
 
           <div class="class row">
             <div class="class col-4"><b>Update</b></div>
-            <div class="col-8" >
+            <div class="col-6" >
               <span id="lastUpdate"></span>
             </div>
           </div>
@@ -124,8 +124,8 @@
               {
                 label: label,
                 data: data,
-                backgroundColor: "rgb(255,255,0)",
-                borderColor: "rgb(102, 102, 0)"
+                backgroundColor: "rgb(102, 102, 0)",
+                borderColor: "rgb(255,255,0)"
               }
             ]
           }
@@ -145,8 +145,8 @@
               {
                 label: label,
                 data: data,
-                backgroundColor: "rgb(0,255,0)",
-                borderColor: "rgb(0, 102, 0)"
+                backgroundColor: "rgb(0, 102, 0)",
+                borderColor: "rgb(0,255,0)"
               }
             ]
           }
