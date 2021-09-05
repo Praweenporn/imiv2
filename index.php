@@ -15,12 +15,12 @@
       <div class="row">
         <div class="col-6">
           <canvas id="chart1" width="400" height="200"></canvas>
-          <p><h6 align="center"><b>Humidity : </b><span id="lastHumidity"></span></h6></p>
+          <br><h6 align="center"><b>Humidity : </b><span id="lastHumidity"></span></h6></br>
         </div>
 
         <div class="col-6">
           <canvas id="chart2" width="400" height="200"></canvas>
-          <p><h6 align="center"><b>Temperature : </b><span id="lastTemperature"></span></h6></p>
+          <br><h6 align="center"><b>Temperature : </b><span id="lastTemperature"></span></h6></br>
         </div>
 
         <div class="col-6">
